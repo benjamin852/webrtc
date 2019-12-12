@@ -12,7 +12,7 @@ const socketServices = require("./socketServices");
 const app = express();
 let port;
 let server = https.createServer(credentials, app);
-port = 6969;
+port = 69;
 
 app.use(express.static("public"));
 
