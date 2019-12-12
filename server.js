@@ -6,12 +6,12 @@
 const express = require("express");
 const socket = require("socket.io");
 const credentials = require("./credentials");
-const https = require("https");
+const http = require("http");
 const socketServices = require("./socketServices");
 
 const app = express();
 let port;
-let server = https.createServer(credentials, app);
+let server = http.createServer(credentials, app);
 port = 69;
 
 app.use(express.static("public"));
