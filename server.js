@@ -1,8 +1,13 @@
-import express from "express";
-import socket from "socket.io";
-import credentials from "./credentials";
-import https from "https";
-import socketServices from "./socketServices";
+// import express from "express";
+// import socket from "socket.io";
+// import credentials from "./credentials";
+// import https from "https";
+// import socketServices from "./socketServices";
+const express = require("express");
+const socket = require("socket.io");
+const credentials = require("./credentials");
+const https = require("https");
+const socketServices = require("./socketServices");
 
 const app = express();
 let port;
@@ -15,6 +20,6 @@ const io = socket(server);
 
 io.on("connection", socketServices(io).listen);
 
-server.listen(port, () => {
+server.listen(port, function() {
   console.log(`Listening on ${port}`);
 });
