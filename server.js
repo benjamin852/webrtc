@@ -20,6 +20,6 @@ const io = socket(server);
 
 io.on("connection", socketServices(io).listen);
 
-server.listen(process.env.port || port, function() {
+server.listen(process.env.PORT || port, function() {
   console.log(`Listening on ${port}`);
 });
